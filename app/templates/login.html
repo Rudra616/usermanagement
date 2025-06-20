@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+
+    <label>name</label>
+    <input type="text" name='name'>
+    <label>password</label>
+    <input type="password" name="password">
+    {% comment %} <label>
+        <select name="role">
+            <option value="user"></option>
+            <option value="admin"></option>
+        </select>
+    </label> {% endcomment %}
+    <button>submit</button>
+    </form>
+    <script>
+        window.onload = function(){
+            {% if error %}
+                alert('{{error}}')
+            {% endif %}
+            {% if error1 %}
+                alert('{{error1}}')
+            {% endif %}
+        }
+    </script>
+</body>
+</html>

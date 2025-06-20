@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>Welcome, {{ username.FirstName }} {{ username.LastName }}</h2>
+
+    {% if success %}
+        <p style="color: green;">{{ success }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="{% url 'update_profile' %}" onsubmit="return required()" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label>First Name:</label>
+        <input type="text" name="FirstName" value="{{ username.FirstName }}" id="FirstName" oninput="characters(this)" required><br><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="LastName" value="{{ username.LastName }}" id="LastName" oninput="characters(this)" required><br><br>
+
+        <label>Username:</label>
+        <input type="text" name="username" value="{{ username.username }}"  id="username" required><br><br>
+
+        <label>password:</label>
+        <input type="text" name="password" value="{{ username.password }}" id="password" required><br><br>
+        
+    {% if username.image %}
+    <img src="{{ username.image.url }}" alt="User Image" width="100px"><br>
+{% else %}
+    <img src="{% static 'images/default.jpg' %}" alt="Default Image" width="100px"><br>
+{% endif %}
+        <div class="mb-3">
+                <label class="form-label">upload Image (Optional)</label>
+                <input class="form-control" type="file" name="image">
+        </div>
+        
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ username.email }}" id="email" required><br><br>
+
+        <label>number:</label>
+        <input type="number" name="number" value="{{ username.phonenumber }}" id="number" required><br><br>
+     
+     
+        <label>Address:</label>
+        <input type="text" name="address" value="{{ username.address }}" id="address" required><br><br>
+        
+        <label for="state">State</label>
+        <select id="state" name="state">
+            {% if username.state %}
+                <option value="{{ username.state }}" selected>{{ username.state }}</option>
+            {% else %}
+                <option value="" selected>Select state</option>
+            {% endif %}
+            <option value="Gujarat">Gujarat</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Rajasthan">Rajasthan</option>
+        </select><br><br>
+        
+        <label for="district">District</label>
+        <select id="district" name="district">
+            {% if username.district %}
+                <option value="{{ username.district }}" selected>{{ username.district }}</option>
+            {% else %}
+                <option value="" selected>Select district</option>
+            {% endif %}
+        </select><br><br>
+        
+                
+                <button type="submit">Update Profile</button>
+            </form>
+        
+            <br>
+                <script src="{% static "js/reg.js" %}"></script>
+                <script>
+        window.onload = function() {
+            {% if success %}
+                alert("{{ success }}");
+            {% endif %}
+    
+            {% if error %}
+                alert("{{ error }}");
+            {% endif %}
+        };
+        </script>
+</body>
+</html>
