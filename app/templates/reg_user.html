@@ -1,90 +1,165 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="{% static 'css/reg_user.css' %}" />
+  </head>
+  <body>
     <div class="card">
-        <h2 class="title">Login Form</h2>
-        <form method="POST" enctype="multipart/form-data" onsubmit="return required()">
-            {% csrf_token %}
-            <div class="input-group">
-                <label for="FirstName">First Name</label>
-                <input class="input--style-4" type="text" name="FirstName" id="FirstName" oninput="characters(this)">
-            </div>
-            <div class="input-group">
-                <label for="LastName">Last Name</label>
-                <input class="input--style-4" type="text" name="LastName" id="LastName" oninput="characters(this)">
-            </div>
-            <div class="input-group">
-                <label for="userName">User Name</label>
-                <input class="input--style-4" type="text" name="username" id="username" >
-            </div>
-         
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input class="input--style-4" type="password" name="password" id="password" >
-            </div>
-            
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input class="input--style-4" type="email" name="email" id="email">
-            </div>
-            <div class="input-group">
-                <label for="email">number</label>
-                <input class="input--style-4" type="number" name="number" id="number">
-            </div>
-            <div class="input-group">
-                <label for="email">address</label>
-                <input class="input--style-4" type="text" name="address" id="address" >
-            </div>
-            <div class="input-group">
-                <label for="email">state</label>
-                <select id="state" name="state" >
-                    <option value="">select state</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="district">district</label>
-                <select id="district" name="district" >
-                    <option value="">-- select district --</option>
-                </select>
-            </div>
-
-
-              <div class="mb-3">
-                <label class="form-label">upload Image (Optional)</label>
-                <input class="form-control" type="file" name="image">
-            </div>
-
-            <div class="input-group">
-                <button class="btn" type="submit">Submit</button>
-            </div>
-        </form>
-        <div class="text-center">
-            <a>Login</a>
+      <div class="main">
+        <div class="title">
+          <h2 class="title">Register Form</h2>
         </div>
+        {% comment %} {% if session %} Do This 
+        <h1>helo</h1>
+        <div class="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
+        {% else %}
+        
+         {% endif %} {% endcomment %}
+        <!--
+         // check is message avaible in session
+         if( session('reg_message')  ) {
+         <div class="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
+         // clear message in session
+        } 
+        
+        -->
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+          onsubmit="return isFormValid()"
+        >
+          {% csrf_token %}
+          <div class="content">
+            <div class="div1">
+              <div class="input-group">
+                <label for="FirstName">First Name</label>
+                <input
+                  type="text"
+                  class="input"
+                  name="FirstName"
+                  id="FirstName"
+                  oninput="onlyAcceptAlphabets(this)"
+                />
+                <small class="error"></small>
+              </div>
+              <br />
+              <div class="input-group">
+                <label for="LastName">Last Name</label>
+                <input
+                  type="text"
+                  class="input"
+                  name="LastName"
+                  id="LastName"
+                  oninput="onlyAcceptAlphabets(this)"
+                />
+                <small class="error"></small>
+              </div>
+              <br />
+            </div>
+
+            <div class="div2">
+              <div class="input-group">
+                <label for="username">User Name</label>
+                <input
+                  type="text"
+                  name="username"
+                  class="input"
+                  id="username"
+                />
+                <small class="error"></small>
+              </div>
+              <br />
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="input"
+                  id="password"
+                />
+                <small class="error"></small>
+              </div>
+              <br />
+            </div>
+            <div class="div3">
+              <div class="input-group">
+                <label for="number">Number</label>
+                <input type="number" name="number" id="number" class="input" />
+                <small class="error"></small>
+              </div>
+              <br />
+
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="input" />
+                <small class="error"></small>
+              </div>
+              <br />
+            </div>
+
+            <div class="div4">
+              <div class="input-group">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="input" />
+                <small class="error"></small>
+              </div>
+              <br />
+              <div class="input-group">
+                <label for="state">State</label>
+                <select id="state" name="state" class="input">
+                  <option value="">Select state</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                </select>
+                <small class="error"></small>
+              </div>
+              <br />
+            </div>
+
+            <div class="div5">
+              <div class="input-group">
+                <label for="district">District</label>
+                <select id="district" name="district" class="input">
+                  <option value="">-- Select District --</option>
+                </select>
+                <small class="error"></small>
+              </div>
+              <br />
+              <div class="input-group">
+                <label class="image">Upload Image</label>
+                <input class="img" type="file" name="image" class="input" />
+              </div>
+              <br />
+            </div>
+          </div>
+
+          <div class="title">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+          <br />
+        </form>
+      </div>
     </div>
+
     <script src="{% static 'js/reg.js' %}"></script>
-        <script>
-        window.onload = function() {
-            {% if success %}
-                alert("{{ success }}");
-            {% endif %}
-    
-            {% if error %}
-                alert("{{ error }}");
-            {% endif %}
-        };
-        </script>
-
-
-</body>
+    <script>
+      window.onload = function () {
+        {% if success %}
+          alert("{{ success }}");
+        {% endif %}
+        {% if error %}
+          alert("{{ error }}");
+        {% endif %}
+      };
+    </script>
+  </body>
 </html>
