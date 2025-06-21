@@ -18,10 +18,10 @@
         {% csrf_token %}
 
         <label>First Name:</label>
-        <input type="text" name="FirstName" value="{{ username.FirstName }}" id="FirstName" oninput="characters(this)" required><br><br>
+        <input type="text" name="FirstName" value="{{ username.FirstName }}" id="FirstName" oninput="onlyAcceptAlphabets(this)" required><br><br>
 
         <label>Last Name:</label>
-        <input type="text" name="LastName" value="{{ username.LastName }}" id="LastName" oninput="characters(this)" required><br><br>
+        <input type="text" name="LastName" value="{{ username.LastName }}" id="LastName" oninput="onlyAcceptAlphabets(this)" required><br><br>
 
         <label>Username:</label>
         <input type="text" name="username" value="{{ username.username }}"  id="username" required><br><br>
@@ -29,11 +29,9 @@
         <label>password:</label>
         <input type="text" name="password" value="{{ username.password }}" id="password" required><br><br>
         
-    {% if username.image %}
-    <img src="{{ username.image.url }}" alt="User Image" width="100px"><br>
-{% else %}
-    <img src="{% static 'images/default.jpg' %}" alt="Default Image" width="100px"><br>
-{% endif %}
+        {% if username.image %}
+            <img src="{{ username.image.url }}" alt="User Image" width="100px"><br>
+        {% endif %}
         <div class="mb-3">
                 <label class="form-label">upload Image (Optional)</label>
                 <input class="form-control" type="file" name="image">
