@@ -26,6 +26,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-4!1mqo4yr@meiv2(giza4ugnbj)%dqg3e-40wfnklcx-3n!!kb"
 
+
+# Email settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER= "rudrampanchal@gmail.com"
+EMAIL_HOST_PASSWORD = 'rvhajiqmxwjnyuqt'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -70,6 +80,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = "project.wsgi.application"
 
