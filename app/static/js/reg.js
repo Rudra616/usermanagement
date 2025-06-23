@@ -62,7 +62,7 @@ function isFormValid() {
   // check for not empty
   all.forEach((element,key) => {
     if(element === ''){
-      errors[key].innerText = "This field is required";
+      errors[key].innerText ="This field is required";
       isValid = false;
     }
   });
@@ -70,7 +70,7 @@ function isFormValid() {
   var cleanedNumber = number.replace(/[^0-9]/g, "");
   if (cleanedNumber.length !== 10) {
     errors[4].innerText = "Number must be exactly 10 digits";
-    document.getElementById("number").focus();
+    document.getElementById("number").focus();  
     isValid = false;
   }
   
