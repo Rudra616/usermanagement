@@ -5,6 +5,10 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+import uuid
+from django.shortcuts import get_object_or_404
+
+from django.core.mail import EmailMultiAlternatives
 
 
 
@@ -28,44 +32,45 @@ def register(request):
 
         if user.objects.filter(username=username).exists():
             return render(request, 'reg_user.html', {'error': 'Username already taken.'})
-
+        email_verification_token = uuid.uuid4()
 
         image = request.FILES.get('image')
         data = user()
-        data.FirstName = firstname
-        data.LastName = lastname
+        data.firstName = firstname
+        data.lastName = lastname
         data.username = username
         data.password = password
         data.email = email
-        data.phonenumber = number
+        data.phone_number = number
         data.image = image
         data.address = address
         data.district = district
         data.state = state
         data.role = 'user'
+        data.email_verification_token = None
+        data.is_varified = False
+        data.save() 
 
-        template_name="email.html"
-        convert_to_html_content = render_to_string(
-            template_name=template_name,
+        verification_link = request.build_absolute_uri(f'/verify/{email_verification_token}/')
+
+        convert_to_html_content = render_to_string("email.html",{'varifictiontoken':verification_link}
         )
-        plain_msg = strip_tags(convert_to_html_content)
+        plain_msg = strip_tags(convert_to_html_content)    
+        subject ='subject here'
+        from_email = settings.EMAIL_HOST_USER
+        to_email = [data.email]
+        email_message = EmailMultiAlternatives(subject, plain_msg, from_email, to_email)
 
-
+        email_message.attach_alternative(convert_to_html_content,'text/html')
+        email_message.send(fail_silently=True)
         
-        send_mail(
-            'subject here',
-            plain_msg,
-            settings.EMAIL_HOST_USER,
-            [data.email],
-            fail_silently=True
-        )
-        data.save()        
         messages.success(request, "Registration successful.")
         return redirect('register')
         
 
 
     return render(request, 'reg_user.html')
+
 
 def admin_dashboard(request):
     username = request.session.get('username')
@@ -83,6 +88,7 @@ def admin_dashboard(request):
     })
 
 def login(request):
+
     if request.method == 'POST':
         userName = request.POST['name']
         password = request.POST['password']
@@ -92,22 +98,27 @@ def login(request):
         if user_obj:
             if password == user_obj.password:
                 request.session['username'] = user_obj.username  
+                if not user_obj.is_varified:
+                    return render(request, 'login.html', {'error3': 'Please verify your email first.'})
+                else: 
+                        if user_obj.role == 'admin':
+                            # all_users = user.objects.filter(role='user')
+                            return redirect('admin_dashboard')
 
-                if user_obj.role == 'admin':
-                    # all_users = user.objects.filter(role='user')
-                    return redirect('admin_dashboard')
 
-
-                else:
-                    # return render(request, 'user_profile.html', {
-                    #     'username': user_obj
-                    # })
-                    return redirect('update_profile')
+                        else:
+                            # return render(request, 'user_profile.html', {
+                            #     'username': user_obj
+                            # })
+                            return redirect('update_profile')
             else:
                 return render(request, 'login.html', {'error': 'Wrong password'})
         else:
             return render(request, 'login.html', {'error1': 'user name not found'})
-           
+    elif request.method == 'GET' and request.session.get('error_message'):
+        return render(request,'login.html', {'error': request.session.get('error_message')})
+    
+        
     return render(request,'login.html')
 
 
@@ -169,3 +180,31 @@ def delete_user(request,id):
 def home(request):
 
     return render(request,'home.html')
+
+
+
+
+# Vefiy User Account  
+def verify_email(request, token):
+
+    try:
+        user_obj = user.objects.get(email_verification_token=token)
+    
+    except user.DoesNotExist:
+        messages.error(request, "Invalid or expired verification link.")
+        return redirect('login')  # or an error page
+    # Check if already verified
+    
+    if user_obj.is_varified:
+        messages.info(request, "Your email is already verified.")
+        # Automatically log the user in
+        request.session['username'] = user_obj.username
+        return redirect('home')  # or wherever you want to send the user
+
+    # Mark as verified
+    user_obj.is_varified = True
+    user_obj.email_verification_token = None  # This ensures the token is removed
+    user_obj.save()
+
+    messages.success(request, "Your email has been verified. You can now log in.")
+    return redirect('login')

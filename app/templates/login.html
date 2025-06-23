@@ -8,6 +8,17 @@
     <title>Document</title>
   </head>
   <body>
+
+    {% if messages %} 
+      {% for message in messages %}
+      <div
+        class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}"
+      >
+        {{ message }}
+      </div>
+      {% endfor %} 
+    {% endif %}
+
     <form
       method="POST"
       onsubmit="return required()"
@@ -41,9 +52,9 @@
     <script src="{% static 'js/login.js' %}"></script>
 
     <script>
-      {% comment %} window.onload = function(){
-          {% if error %}
-              alert('{{error}}')
+     window.onload = function(){
+          {% if error3 %}
+              alert('{{error3}}')
           {% endif %}
           {% if error1 %}
               alert('{{error1}}')
@@ -51,7 +62,7 @@
           {% if enter %}
               alert('{{enter}}')
           {% endif %}
-      } {% endcomment %}
+      } 
     </script>
   </body>
 </html>
