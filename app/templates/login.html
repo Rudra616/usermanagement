@@ -4,38 +4,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
   </head>
   <body>
     <form
       method="POST"
-      enctype="multipart/form-data"
       onsubmit="return required()"
     >
+   
       {% csrf_token %}
+      {% if error %}
+          <h1>{{error}}</h1>
+      {% endif %}
 
-      <div class="mb-3 row">
-        <label for="staticEmail" class="col-sm-2 col-form-label"
-          >username</label
-        >
-        <div class="col-sm-10">
-          <input type="text" readonly class="name" id="name" id="password" />
-        </div>
+      <div class="mb-3">
+        <label for="exampleInputusername" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name='name'
+          class="name"
+          aria-describedby="username.help"
+        />
+        <small class="error"></small>
+       
       </div>
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label"
-          >Password</label
-        >
-        <div class="col-sm-10">
-          <input type="password" class="password" id="password" />
-        </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name='password'  id="password" />
+        <small class="error"></small>
       </div>
-      <button>submit</button>
+      <button type="submit" class="btn btn-primary ">Submit</button>
     </form>
     <script src="{% static 'js/login.js' %}"></script>
 
     <script>
-      window.onload = function(){
+      {% comment %} window.onload = function(){
           {% if error %}
               alert('{{error}}')
           {% endif %}
@@ -45,7 +51,7 @@
           {% if enter %}
               alert('{{enter}}')
           {% endif %}
-      }
+      } {% endcomment %}
     </script>
   </body>
 </html>
