@@ -73,7 +73,7 @@
     display: flex;
 } */
 
-
+/* 
 .card{
     display: flex;
     justify-content: center;
@@ -146,17 +146,76 @@
     height: 10px;
     width: 130px;
     margin-bottom: 10px;
-    background-color: aquamarine;
+    background-color: rgb(255, 153, 127);
 }
 #errornum{
     height: 10px;
     width: 130px;
     margin-bottom: 10px;
-    background-color: aquamarine;
+    background-color: rgb(255, 146, 132);
 }
 .btn{
     height: 40px;
     width: 80px;
-    border-radius: 5px;
+    border-radius: 5px; 
+}    
+    */
 
+.error{
+    height: 10px;
+    width: 130px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 153, 127);
+}
+#errornum{
+    height: 10px;
+    width: 130px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 146, 132);
+}
+.btn{
+    height: 40px;
+    width: 80px;
+    border-radius: 5px; 
+}    
+
+.row{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.col-12{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.col-md-6{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#image{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 10%;
+}
+.mb-3{
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.title_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button{
+    padding-top: 2%;
+}
+
+.btn{
+    height: fit-content;
+    width: fit-content;
 }
