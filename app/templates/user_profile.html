@@ -13,8 +13,8 @@
 <body> 
       <div class="container"> 
         <div class="row">
-          <div class="col">
-            <h2>Welcome, {{ username.FirstName }} {{ username.LastName }}</h2>
+          <div class="col pt-3">
+            <h2>Welcome, {{ username.firstName }} {{ username.lastName }}</h2>
           </div>
         </div>  
         <div class="row">
@@ -130,6 +130,8 @@
         
             
                 <script src="{% static "js/reg.js" %}"></script>
+                {% bootstrap_javascript %}
+
                 <script>
         // {% comment %} window.onload = function() {
         //     {% if success %}
