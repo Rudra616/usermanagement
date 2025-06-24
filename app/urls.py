@@ -9,6 +9,6 @@ urlpatterns = [
     path('home',home,name='home'),
     path('admin_dashboard',admin_dashboard,name='admin_dashboard'),
     path('verify/<uuid:token>/', verify_email, name='verify_email'),
-
+    path('logout',logout,name='logout')
 ]
 
