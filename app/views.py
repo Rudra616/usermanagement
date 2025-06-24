@@ -47,7 +47,7 @@ def register(request):
         data.district = district
         data.state = state
         data.role = 'user'
-        data.email_verification_token = None
+        data.email_verification_token = email_verification_token
         data.is_varified = False
         data.save() 
 
@@ -110,14 +110,13 @@ def login(request):
                             # return render(request, 'user_profile.html', {
                             #     'username': user_obj
                             # })
-                            return redirect('update_profile')
+                            
+                            return redirect('home')
             else:
                 return render(request, 'login.html', {'error': 'Wrong password'})
         else:
             return render(request, 'login.html', {'error1': 'user name not found'})
-    elif request.method == 'GET' and request.session.get('error_message'):
-        return render(request,'login.html', {'error': request.session.get('error_message')})
-    
+
         
     return render(request,'login.html')
 
@@ -138,10 +137,10 @@ def update_profile(request):
                     'error': 'Username already taken.'
                 })
         user_obj.username = new_username
-        user_obj.FirstName = request.POST['FirstName']
-        user_obj.LastName = request.POST['LastName']
+        user_obj.firstName = request.POST['FirstName']
+        user_obj.lastName = request.POST['LastName']
         user_obj.email = request.POST['email']
-        user_obj.phonenumber = request.POST['number']
+        user_obj.phone_number = request.POST['number']
         user_obj.address = request.POST['address']
         user_obj.password = request.POST['password']
         user_obj.district = request.POST['district']
@@ -189,12 +188,16 @@ def verify_email(request, token):
 
     try:
         user_obj = user.objects.get(email_verification_token=token)
-    
     except user.DoesNotExist:
-        messages.error(request, "Invalid or expired verification link.")
-        return redirect('login')  # or an error page
+        user_obj = user.objects.filter(is_varified=True).first()
+        if user_obj:
+            messages.info(request,"the varification link already varified")
+            return redirect('login')
+        else:          
+            messages.error(request, "Invalid or expired verification link.")
+            return redirect('login')  # or an error page
     # Check if already verified
-    
+        
     if user_obj.is_varified:
         messages.info(request, "Your email is already verified.")
         # Automatically log the user in
@@ -208,3 +211,9 @@ def verify_email(request, token):
 
     messages.success(request, "Your email has been verified. You can now log in.")
     return redirect('login')
+
+
+def logout(request):
+    if 'username' in request.session:
+        del request.session['username']  
+    return redirect('home')  
