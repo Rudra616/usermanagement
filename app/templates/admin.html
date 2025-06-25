@@ -1,12 +1,7 @@
-{% load django_bootstrap5 %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    {% bootstrap_css %}
-</head>
-<body>
+{% extends "nav.html" %}
+
+
+{% block body %}
 <h2 class="p">Welcome Admin: {{ admin_name }}</h2>
 <i class="fa fa-home" aria-hidden="true"></i>
     <h3>All Users</h3>
@@ -47,6 +42,6 @@
             {% endfor %}
     </table>
     <a href="{% url 'update_profile' %}">see your profile</a>
-
+    {%endblock%}
 </body>
 </html>

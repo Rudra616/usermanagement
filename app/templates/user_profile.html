@@ -1,16 +1,12 @@
+{% extends "nav.html" %}
 {% load static %}
-{% load django_bootstrap5 %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Profile</title>
+{% block tittle %}user_profile{% endblock %}
+
+{% block css %}
     <link rel="stylesheet" href="{% static 'css/reg_user.css' %}" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    {% bootstrap_css %}
-
-</head>
-<body> 
+{%endblock%}
+{% block body %}
       <div class="container"> 
         <div class="row">
           <div class="col pt-3">
@@ -28,7 +24,7 @@
           </div>  
         </div>    
 
-            <form method="POST" action="{% url 'update_profile' %}"  onsubmit="return isFormValid()" enctype="multipart/form-data">
+        <form method="POST" action="{% url 'update_profile' %}"  onsubmit="return isFormValid()" enctype="multipart/form-data">
                 {% csrf_token %}
             
         <div class="row">
@@ -130,18 +126,4 @@
         
             
                 <script src="{% static "js/reg.js" %}"></script>
-                {% bootstrap_javascript %}
-
-                <script>
-        // {% comment %} window.onload = function() {
-        //     {% if success %}
-        //         alert("{{ success }}");
-        //     {% endif %}
-    
-        //     {% if error %}
-        //         alert("{{ error }}");
-        //     {% endif %}
-        // }; {% endcomment %}
-        </script>
-</body>
-</html>
+{% endblock body %}

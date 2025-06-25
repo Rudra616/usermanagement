@@ -211,3 +211,8 @@ def logout(request):
     if 'username' in request.session:
         del request.session['username']  
     return redirect('home')  
+
+def home(request):
+    userName = request.session.get('username')
+    user_obj = user.objects.filter(username=userName).first()
+    return render(request,'home.html',{'userdetails':user_obj})
