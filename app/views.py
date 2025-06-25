@@ -148,9 +148,7 @@ def update_profile(request):
         image = request.FILES.get('image')  
         if image:
             user_obj.image = image 
-        # request.session['username'] = user_obj.username
-
-
+    
 
         user_obj.save()
 
@@ -175,10 +173,6 @@ def delete_user(request,id):
 
     return redirect('admin_dashboard')
 
-
-def home(request):
-
-    return render(request,'home.html')
 
 
 
