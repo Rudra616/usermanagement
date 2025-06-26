@@ -1,10 +1,16 @@
 {% extends "nav.html" %}
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}
 
 
 {% block body %}
 <h2 class="p">Welcome Admin: {{ admin_name }}</h2>
-<i class="fa fa-home" aria-hidden="true"></i>
     <h3>All Users</h3>
+      {% comment %} <form class="d-flex" method="GET">
+    <input class="form-control me-2" type="search" name="search" value="{{ request.GET.search }}" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form> {% endcomment %}
     <table class="table table-dark table-striped">
         
             <tr>
@@ -19,6 +25,7 @@
                 <th>Role</th>
                 <th>Actions</th> <!-- New column -->
             </tr>
+
             {% for user in users %}
             <tr>
                 <td>{{ user.id }}</td>
@@ -41,6 +48,20 @@
             <tr><td colspan="10">No users found.</td></tr>
             {% endfor %}
     </table>
+    <div class="pagination">
+    {% if users.has_previous %}
+        <a href="?page=1"><i class="fa-regular fa-circle-left"></i></a>
+        <a href="?page={{ users.previous_page_number }}"></a>
+    {% endif %}
+
+    <span>Page {{ users.number }} of {{ users.paginator.num_pages }}</span>
+
+    {% if users.has_next %}
+        <a href="?page={{ users.next_page_number }}"><i class="fa-regular fa-circle-right"></i></a>
+        <a href="?page={{ users.paginator.num_pages }}"></a>
+    {% endif %}
+</div>
+
     <a href="{% url 'update_profile' %}">see your profile</a>
     {%endblock%}
 </body>
