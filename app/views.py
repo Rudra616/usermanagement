@@ -6,9 +6,11 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 import uuid
-from django.shortcuts import get_object_or_404
+# from django.shortcuts import get_object_or_404
+# from django.db.models import Q
 
 from django.core.mail import EmailMultiAlternatives
+from django.core.paginator import Paginator
 
 
 
@@ -81,10 +83,28 @@ def admin_dashboard(request):
     if not user_obj or user_obj.role != 'admin':
         return redirect('login') 
 
+    # search_query = request.GET.get('search', '')
+
+  
     all_users = user.objects.filter(role='user')
+
+    # if search_query:
+    #     all_users = all_users.filter(
+    #         Q(username__icontains=search_query) |
+    #         Q(firstName__icontains=search_query) |
+    #         Q(lastName__icontains=search_query) |
+    #         Q(email__icontains=search_query) |
+    #         Q(address__icontains=search_query) |
+    #         Q(district__icontains=search_query) |
+    #         Q(state__icontains=search_query)
+    #     )
+
+    page_number = request.GET.get("page")
+    paginator = Paginator(all_users,10)
+    page_obj = paginator.get_page(page_number)
     return render(request, 'admin.html', {
         'admin_name': user_obj.username,
-        'users': all_users
+        'users': page_obj
     })
 
 def login(request):
@@ -153,11 +173,10 @@ def update_profile(request):
         user_obj.save()
 
         request.session['username'] = user_obj.username
+                
+        messages.success(request, 'Profile updated successfully.')
 
-        return render(request, 'user_profile.html', {
-            'username': user_obj,
-            'success': 'Profile updated successfully.'
-        })
+        return redirect('update_profile') 
         
 
     return render(request, 'user_profile.html', {
@@ -214,5 +233,6 @@ def logout(request):
 
 def home(request):
     userName = request.session.get('username')
+    
     user_obj = user.objects.filter(username=userName).first()
     return render(request,'home.html',{'userdetails':user_obj})
