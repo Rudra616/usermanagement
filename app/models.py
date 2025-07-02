@@ -20,8 +20,7 @@ class user(models.Model):
     district = models.CharField(max_length=50)
     image = models.ImageField(upload_to="user_images/", blank=True)
     is_varified =models.BooleanField(default=False)
+    date_of_birth = models.DateField(null=True, blank=True)
     email_verification_token = models.UUIDField(default=uuid.uuid4, unique=True, null=True, blank=True)
     def __str__(self):
         return self.username
-
-

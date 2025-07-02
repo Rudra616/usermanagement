@@ -22,7 +22,7 @@
                 <th>Address</th>
                 <th>District</th>
                 <th>State</th>
-                <th>Role</th>
+                <th>date_of_birth</th>
                 <th>Actions</th> <!-- New column -->
             </tr>
 
@@ -36,7 +36,7 @@
                 <td>{{ user.address }}</td>
                 <td>{{ user.district }}</td>
                 <td>{{ user.state }}</td>
-                <td>{{ user.role }}</td>
+                
                 <td>
                     <a href="{% url 'delete_user' user.id %}"
                        onclick="return confirm('Are you sure you want to delete {{ user.username }}?');">
@@ -65,4 +65,3 @@
     <a href="{% url 'update_profile' %}">see your profile</a>
     {%endblock%}
 </body>
-</html>
