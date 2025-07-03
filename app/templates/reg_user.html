@@ -12,14 +12,7 @@
         <h3 class="title">Register Form</h3>
         </div>
 
-        {% if messages %} {% for message in messages %}
-        <div
-          class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-error{% endif %}"
-        >
-          {{ message }}
-        </div>
-        {% endfor %} {% endif %}
-
+     
         <!--
          // check is message avaible in session
          if( session('reg_message')  ) {
@@ -30,12 +23,18 @@
         } 
         
         -->
-        <form
+        {% comment %} <form
           method="POST"
           enctype="multipart/form-data"
           onsubmit="return isFormValid()"
-        >
-          {% csrf_token %}
+        > {% endcomment %}
+
+<form
+  id="registerForm"
+  method="POST"
+  enctype="multipart/form-data"
+  onsubmit="return isFormValid()"
+>          {% csrf_token %}
 
                 <div class="row g-3">
                   <div class="col-md-6">
@@ -147,15 +146,134 @@
         </form>
 
 
-    <script src="{% static 'js/reg.js' %}"></script>
-    <script>
-      // window.onload = function () {
-      //   {% if success %}
-      //     alert("{{ success }}");
-      //   {% endif %}
-      //   {% if error %}
-      //     alert("{{ error }}");
-      //   {% endif %}
-      // };
+    <script src="{% static 'js/reg.js' %}"></script>      <script>
+var stateDistrictMap = {
+  Gujarat: ["Ahmedabad", "Surat", "Rajkot"],
+  Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+  Rajasthan: ["Jaipur", "Udaipur", "Jodhpur"],
+};
+
+var stateDropdown = document.getElementById("state");
+var districtDropdown = document.getElementById("district");
+
+stateDropdown.onchange = function () {
+  var selectedState = stateDropdown.value;
+  var districts = stateDistrictMap[selectedState];
+
+  districtDropdown.innerHTML = "";
+
+  var defaultOption = document.createElement("option");
+  defaultOption.text = "-- Select District --";
+  defaultOption.value = "";
+  districtDropdown.add(defaultOption);
+
+  if (districts) {
+    for (var i = 0; i < districts.length; i++) {
+      var option = document.createElement("option");
+      option.text = districts[i];
+      option.value = districts[i];
+      districtDropdown.add(option);
+    }
+  }
+};
+
+function isFormValid() {
+  var errors = document.querySelectorAll("[class='error']");
+  var FirstName = document.getElementById("FirstName").value;
+  var LastName = document.getElementById("LastName").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var number = document.getElementById("number").value;
+  var email = document.getElementById("email").value;
+  var address = document.getElementById("address").value;
+  var state = document.getElementById("state").value;
+  var district = document.getElementById("district").value;
+
+  var all = [
+    FirstName,
+    LastName,
+    username,
+    password,
+    number,
+    email,
+    address,
+    state,
+    district,
+  ];
+  var isValid = true;
+
+  // Clear all error messages 
+  errors.forEach((element, key) => {
+    errors[key].innerText = '';
+  }); 
+
+  // Check for empty fields
+  all.forEach((element, key) => {
+    if (element === '') {
+      errors[key].innerText = "This field is required";
+      isValid = false;
+    }
+  });
+
+  var cleanedNumber = number.replace(/[^0-9]/g, "");
+  if (cleanedNumber.length !== 10) {
+    errors[4].innerText = "Number must be exactly 10 digits";
+    document.getElementById("number").focus();
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+function onlyAcceptAlphabets(input) {
+  input.value = input.value.replace(/[^a-zA-Z]/g, "");
+}
+
+// ✅ AJAX Submit Logic
+document.getElementById("registerForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+//It stops the browser from reloading or submitting the form in the normal way.
+//This gives you full control to:
+//Validate the form manually
+//Send the data using AJAX (fetch())
+//Show success or error messages without reloading the page.
+
+  if (!isFormValid()) return;
+
+  const form = this;
+  const formData = new FormData(form);
+
+  const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+  fetch(form.action || window.location.href, {
+    method: "POST",
+    headers: {
+      "X-CSRFToken": csrfToken,
+      "X-Requested-With": "XMLHttpRequest"
+    },
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    const alertBox = document.createElement("div");
+    alertBox.classList.add("alert");
+    alertBox.classList.add(data.status === "success" ? "alert-success" : "alert-error");
+    alertBox.innerText = data.message;
+
+    document.querySelectorAll(".alert").forEach(el => el.remove());
+    form.insertAdjacentElement("beforebegin", alertBox);
+
+    if (data.status === "success") {
+      form.reset();
+      districtDropdown.innerHTML = '<option value="">-- Select District --</option>';
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Something went wrong while submitting the form.");
+  });
+});
+</script>
+
     </script>
   {%endblock%}

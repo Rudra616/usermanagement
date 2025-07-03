@@ -10,7 +10,7 @@ urlpatterns = [
     path('logout',logout,name='logout'),
     path('home',home,name='home'),
     path('index',index,name="index"),
-    # path('admin_dashboard',admin_dashboard,name='admin_dashboard')
-    
+    path('user_listing',admin_dashbord,name='admin_dashbord'),
+    path('',new_usermanagement,name='new_usermanagement')
 ]
 

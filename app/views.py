@@ -128,8 +128,8 @@ def admin_dashbord(request):
                 #   in if condition go not all then claculation 
                 #   if all then return 1                    
         context = {
-            'userdetails': user_obj,
             'is_admin': True,
+            'userdetails': user_obj,
             'users': page_obj,
             "search_query": search_query,
             'per_page': per_page,

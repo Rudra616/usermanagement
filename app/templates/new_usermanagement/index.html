@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Management - SPA</title>
+  <style>
+    .section { display: none; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar to switch -->
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('login')">Login</button>
+    <button onclick="showSection('register')">Register</button>
+    <button onclick="showSection('update')">Update</button>
+    <button onclick="showSection('admin')">Admin</button>
+  </nav>
+
+  <!-- ✅ Include existing templates as sections -->
+  <div id="home" class="section active">
+    <h2>Welcome to SPA Home</h2>
+  </div>
+
+  <div id="login" class="section">
+    {% include 'login.html' %}
+  </div>
+
+  <div id="register" class="section">
+    {% include 'reg_user.html' %}
+  </div>
+
+  <div id="update" class="section">
+    {% include 'user_profile.html' %}
+  </div>
+
+  <div id="admin" class="section">
+    {% include 'admin.html' %}
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(div => div.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
