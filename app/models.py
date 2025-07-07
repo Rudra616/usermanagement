@@ -1,6 +1,11 @@
 from django.db import models
-
+import random
+import string
 # Create your models here.
+
+def generate_random_token():
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=12))
+
 import uuid
 
 class user(models.Model):
@@ -22,5 +27,22 @@ class user(models.Model):
     is_varified =models.BooleanField(default=False)
     date_of_birth = models.DateField(null=True, blank=True)
     email_verification_token = models.UUIDField(default=uuid.uuid4, unique=True, null=True, blank=True)
+    reset_token = models.UUIDField(null=True, blank=True)
+    reset_expire = models.DateTimeField(null=True, blank=True)
     def __str__(self):
         return self.username
+    
+class State(models.Model):
+    name = models.CharField(max_length=100)
+    def __str__(self):
+        return self.name
+    
+
+
+class District(models.Model):
+    name = models.CharField(max_length=100)
+    state = models.ForeignKey('State', models.DO_NOTHING)
+    def __str__(self):
+        return self.name
+    
+   

@@ -37,39 +37,63 @@
 
 <script>
     function fetchUsers(params={}){
+
+        //It takes one argument: params (default is empty object {})
+
+        const queryString = new URLSearchParams(params).toString();//.toString() → Makes it a plain query string.
+        const newUrl = window.location.pathname + '?' + queryString;//pathname = admin_dashbord and ? quarystring
+        
+        // Update browser URL
+        window.history.pushState({}, '', newUrl);//js api without reloading page
+        // {} Save which page or search user was on.,''page title
+
+        //jQuery’s AJAX
         $.ajax({
             url: "{% url 'admin_dashbord' %}",
-            data: params,             // These are the parameters (search, per_page, page)
-            type :'GET',
-            success:function(data){
-                $('#userTableSection').html(data.html);
+            data: params,             // These are the parameters (search, per_page, page,sort)
+            type :'GET',  // read only 
+            success:function(data){    //status 200
+                $('#userTableSection').html(data.html); //Replaces its contents with the new table HTML sent by Django.
             }
         });
     }
-     // Step 2: When the search form is submitted
-    $("#filterForm").on('submit',function(e){
-        e.preventDefault();
 
-        const search = $("#searchInput").val()
-        const per_page =$("#perPageSelect").val()
+     // Step 2: When the search form is submitted
+    $("#filterForm").on('submit',function(e){  //e = event object for form submit.
+        e.preventDefault(); // not load page 
+
+        const search = $("#searchInput").val()// 
+        const per_page =$("#perPageSelect").val()//
 
         fetchUsers({search :search,per_page:per_page});
-
+        // fetch value of search , per_page
     })
 
+    // select page
     $('#perPageSelect').on('change', function () {
         $('#filterForm').submit(); 
     });
 
-
+    //pagination click next previous
     $(document).on('click','.pagelink',function(e){
-        e.preventDefault()
-        const page = $(this).data('page'); 
+        e.preventDefault()    // no page reload
+        const page = $(this).data('page'); //$(this) means "the element you clicked on", .data which page
+        const search = $('#searchInput').val(); //value of search
+        const per_page = $('#perPageSelect').val();  // value of perPageSelect
+        fetchUsers({ page: page, search: search, per_page: per_page }); // Load new page via AJAX
+    })
+
+    $(document).on('click', '.ajax-sort', function(e){    //for sorting
+        e.preventDefault();   // not load
+
+        // Get current search and per_page values
         const search = $('#searchInput').val();
         const per_page = $('#perPageSelect').val();
-        fetchUsers({ page: page, search: search, per_page: per_page }); // Load new page via AJAX
+        const sort = $(this).data('sort');  // e.g., 'username'
 
-    })
+        // Call your fetchUsers function with sort param added
+        fetchUsers({search: search, per_page: per_page, sort: sort});
+});
 
 
 </script>

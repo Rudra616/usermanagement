@@ -1,0 +1,49 @@
+<div id="login_section" class="section">
+  <h3 class="mb-3">Login</h3>
+  {% if messages %}
+  <div>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %} {% if error and section == 'login' %}
+  <div class="alert alert-danger" role="alert">
+    <strong>Error: </strong>{{ error }}
+  </div>
+  {% endif %} {% if success_message and section == 'login' %}
+  <div class="alert alert-success" role="alert">{{ success_message }}</div>
+  {% endif %}
+
+  <form
+    method="POST"
+    action="{% url 'new_index' %}"
+    onsubmit="return validateLoginForm();"
+  >
+    {% csrf_token %}
+    <input type="hidden" name="action" value="login" />
+    <div class="mb-3">
+      <label for="login_username" class="form-label">Username</label>
+      <input
+        type="text"
+        name="name"
+        id="login_username"
+        class="form-control"
+        maxlength="10"
+      />
+      <small class="error text-danger"></small>
+    </div>
+    <div class="mb-3">
+      <label for="login_password" class="form-label">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="login_password"
+        class="form-control"
+        maxlength="10"
+        minlength="6"
+      />
+      <small class="error text-danger"></small>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Login</button>
+  </form>
+</div>

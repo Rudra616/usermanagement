@@ -1,50 +1,229 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-<head>
-  <title>User Management - SPA</title>
-  <style>
-    .section { display: none; }
-    .active { display: block; }
-  </style>
-</head>
-<body>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- ✅ Navbar to switch -->
-  <nav>
-    <button onclick="showSection('home')">Home</button>
-    <button onclick="showSection('login')">Login</button>
-    <button onclick="showSection('register')">Register</button>
-    <button onclick="showSection('update')">Update</button>
-    <button onclick="showSection('admin')">Admin</button>
-  </nav>
+    <link
+      rel="stylesheet"
+      href="{% static 'css/new_usermanagement/main.css' %}"
+    />
+    <style>
+      body {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      .section {
+        display: none;
+      }
+      .navbar {
+        box-shadow: none;
+      }
+      .nav-link {
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        body {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand">User Management</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" onclick="showSection('home')" id="nav-home"
+                >Home</a
+              >
+            </li>
+            {% if not request.session.username %}
+            <li class="nav-item">
+              <a class="nav-link" onclick="showSection('login')" id="nav-login"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="showSection('register')"
+                id="nav-register"
+                >Register</a
+              >
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="showSection('update_profile')"
+                id="nav-update_profile"
+                >update_profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="logoutUser()">Logout</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!-- ✅ Include existing templates as sections -->
-  <div id="home" class="section active">
-    <h2>Welcome to SPA Home</h2>
-  </div>
+    <div class="container">
+      <!-- HOME SECTION -->
+      <div id="home_section" class="section">
+        {% comment %} <h2>
+          Welcome {% if request.session.username %} {{ userdetails.firstName }}
+          {% else %} Guest {% endif %}
+        </h2>
+        <p>This is the home page content.</p> {% endcomment %}
+        {% if request.session.username %}
+         {% if userdetails.role == "admin" %}
+         helo
+            {% include "new_usermanagement/admin_deshbord.html" %}
+         {% else %}
+         {{ userdetails.firstName }}
+         {% endif %}
+        {% else %} 
+        Guest
+        {% endif %}
 
-  <div id="login" class="section">
-    {% include 'login.html' %}
-  </div>
+      </div>
+      <!-- login-->
+      {% include "new_usermanagement/login.html" %}
+      
+      <!--register-->
+      {% include "new_usermanagement/register.html" %}
+        
+      <!--update Profile-->
+      {% include "new_usermanagement/update_profile.html" %}
+    </div>
 
-  <div id="register" class="section">
-    {% include 'reg_user.html' %}
-  </div>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+            function onlyAcceptAlphabets(input) { 
+  input.value = input.value.replace(/[^a-zA-Z]/g, "");
+}
 
-  <div id="update" class="section">
-    {% include 'user_profile.html' %}
-  </div>
 
-  <div id="admin" class="section">
-    {% include 'admin.html' %}
-  </div>
+            function showSection(sectionName) {
+              document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+              // find the all element class name was sectioon
+              // loop and all section = none
+              const sec = document.getElementById(sectionName + "_section");
+              // combine the name
+              if (sec) sec.style.display = "block";
+              //This makes only the selected section visible.
+              document.querySelectorAll(".navbar-nav .nav-link").forEach(link => link.classList.remove("active"));
+              //Removes the active class from all navbar links.
+              const activeLink = document.getElementById("nav-" + sectionName);
+              //Finds the navbar link with ID like nav-login or nav-home.
+              if (activeLink) activeLink.classList.add("active");
+                //Adds the active class to it so Bootstrap styles it as highlighted.
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(div => div.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+            }
 
-</body>
+            function logoutUser() {
+              fetch("{% url 'new_logout' %}", { method: "GET", credentials: "same-origin" })
+              .then(() => location.reload());
+            }
+
+            function validateLoginForm() {
+              let valid = true;
+              let username = document.getElementById('login_username');
+              let password = document.getElementById('login_password');
+              username.nextElementSibling.innerText = '';
+              password.nextElementSibling.innerText = '';
+              if (!username.value.trim()) {
+                username.nextElementSibling.innerText = "Username is required";
+                valid = false;
+              }
+              if (!password.value.trim()) {
+                password.nextElementSibling.innerText = "Password is required";
+                valid = false;
+              }
+              return valid;
+            }
+
+            function validateRegisterForm() {
+              let valid = true;
+              let fields = [
+                'reg_firstname', 'reg_lastname', 'reg_username', 'reg_password',
+                'reg_number', 'reg_email', 'reg_address', 'reg_state', 'reg_district'
+              ];
+              fields.forEach(id => {
+                let input = document.getElementById(id);
+                input.nextElementSibling.innerText = '';
+                if (!input.value.trim()) {
+                  input.nextElementSibling.innerText = "This field is required";
+                  valid = false;
+                }
+              });
+              let number = document.getElementById('reg_number').value;
+              if (number.length !== 10) {
+                document.getElementById('reg_number').nextElementSibling.innerText = "Enter 10-digit number";
+                valid = false;
+              }
+              return valid;
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+              {% if request.session.username %}
+                showSection('home');
+              {% else %}
+                showSection("{{ section }}");
+              {% endif %}
+            });
+
+
+            const stateDistrictMap = {
+              Gujarat: ["Ahmedabad", "Surat", "Rajkot"],
+              Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+              Rajasthan: ["Jaipur", "Udaipur", "Jodhpur"],
+            };
+            document.getElementById('reg_state').addEventListener('change', function() {
+              let districts = stateDistrictMap[this.value] || [];
+              let districtSelect = document.getElementById('reg_district');
+              districtSelect.innerHTML = '<option value="">-- Select District --</option>';
+              districts.forEach(d => {
+                let opt = document.createElement('option');
+                opt.value = d;
+                opt.textContent = d;
+                districtSelect.appendChild(opt);
+              });
+            });
+
+    </script>
+  </body>
 </html>

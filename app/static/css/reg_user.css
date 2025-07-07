@@ -164,14 +164,15 @@
 .error{
     height: 10px;
     width: 130px;
+    color: white;
     margin-bottom: 10px;
-    background-color: rgb(255, 153, 127);
+    background-color: rgb(196, 55, 55);
 }
 #errornum{
     height: 10px;
     width: 130px;
     margin-bottom: 10px;
-    background-color: rgb(255, 146, 132);
+    background-color: rgb(204, 41, 23);
 }
 .btn{
     height: 40px;

@@ -1,0 +1,151 @@
+
+        
+    
+<div id="update_profile_section" class="section mt-4">
+    <div class="container"> 
+        <div class="row">
+          <div class="col pt-3">
+            <h2>Welcome, {{ userdetails.firstName }} {{ userdetails.lastName }}</h2>
+          </div>
+        
+
+       {% if messages %}
+      <div class="container mt-2">
+        {% for message in messages %}
+          <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}  
+
+        <form method="POST" action="{% url 'new_index' %}"  onsubmit="return isFormValid()" enctype="multipart/form-data">
+                {% csrf_token %}
+    <input type="hidden" name="action" value="update_profile" />
+        
+        <div class="row">
+            <div class="col">
+                <label>First Name:</label>
+                <input type="text" name="FirstName" class="form-control" value="{{ userdetails.firstName }}" id="FirstName" oninput="onlyAcceptAlphabets(this)" oninput="onlyAcceptAlphabets(this)" >
+                <small class="error"></small>
+            </div> 
+            <div class="col">    
+                <label>Last Name:</label>
+                <input type="text" name="LastName" class="form-control" value="{{ userdetails.lastName }}" id="LastName" oninput="onlyAcceptAlphabets(this)" >
+                <small class="error"></small>
+            </div>   
+        </div>    
+
+        
+        <div class="row">
+            <div class="col">
+                <label>Username:</label>
+                <input type="text" name="username" class="form-control" value="{{ userdetails.username }}"  id="username" >
+                        <small class="error"></small>
+            </div>    
+            <div class="col">
+                <label>password:</label>
+                <input type="text" name="password" class="form-control" value="{{ userdetails.password }}" id="password" >
+                        <small class="error"></small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label>Email:</label>
+                <input type="email" name="email" class="form-control" value="{{ userdetails.email }}" id="email" >
+                        <small class="error"></small>
+            </div>
+        </div>    
+                
+        <div class="row">
+            <div class="col">
+                <label>number:</label>
+                <input type="number" name="number" class="form-control" value="{{ userdetails.phone_number }}" id="number" >
+                     <small class="error"></small>
+            </div>
+            <div class="col">
+                <label>Address:</label>
+                <input type="text" name="address" class="form-control" value="{{ userdetails.address }}" id="address" >
+                        <small class="error"></small>
+            </div>
+        </div>
+                
+        <div class="row">
+            <div class="col">
+                <label for="state">State</label>
+                <select id="state" name="state" class="form-select">
+                    {% if userdetails.state %}
+                        <option value="{{ userdetails.state }}" selected>{{ userdetails.state }}</option>
+                    {% else %}
+                        <option value="" selected>Select state</option>
+                    {% endif %}
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                </select>
+                        <small class="error"></small>
+            </div>    
+
+            <div class="col">
+                <label for="district">District</label>
+                <select id="district" name="district" class="form-select" >
+                    {% if userdetails.district %}
+                        <option value="{{ userdetails.district }}" selected>{{ userdetails.district }}</option>
+                    {% else %}
+                        <option value="" selected>Select district</option>
+                    {% endif %}
+                </select>
+                        <small class="error"></small>
+            </div>    
+        </div>    
+
+        <div class="row">
+            <div class="col">
+                
+            {% if userdetails.image %}
+                <img src="{{ userdetails.image.url }}" alt="User Image" width="100px">
+            {% endif %}
+                
+                    <label class="form-label">upload Image (Optional)</label>
+                    <input class="form-control" type="file" name="image">
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col" id="button">
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+            </div>
+        </div>    
+      </div>
+
+    </form>
+</div>        
+<script>
+function isFormValid() {
+    let valid = true;
+    let fields = [
+        'FirstName', 'LastName', 'username', 'password',
+        'number', 'email', 'address', 'state', 'district'
+    ];
+
+    fields.forEach(id => {
+        let input = document.getElementById(id);
+        let errorElement = input.parentElement.querySelector('small.error');
+        errorElement.innerText = ''; // clear old errors
+
+        if (!input.value.trim()) {
+            errorElement.innerText = "This field is required";
+            valid = false;
+        }
+    });
+
+    // Check if number field has exactly 10 digits
+    let numberInput = document.getElementById('number');
+    if (numberInput.value.trim().length !== 10) {
+        numberInput.nextElementSibling.innerText = "Enter 10-digit number";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>

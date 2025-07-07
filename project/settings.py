@@ -27,10 +27,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = "django-insecure-4!1mqo4yr@meiv2(giza4ugnbj)%dqg3e-40wfnklcx-3n!!kb"
 
 
+from decouple import config
+
 # Email settings
+
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER= "rudrampanchal@gmail.com"
-EMAIL_HOST_PASSWORD = 'rvhajiqmxwjnyuqt'
+EMAIL_HOST_USER= config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
