@@ -3,16 +3,39 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/reg_user.css' %}" />
-{% endblock %}
 
-{% block title %}Register{% endblock %}
+<style>
 
+       #loader {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 80px;
+            height: 80px;
+            margin: -40px 0 0 -40px;
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #3498db;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+</style>
+
+{% endblock css %}
 {% block body %}
+<div id="loader"></div>
 <div class="title_center">
   <h3 class="title">Register Form</h3>
 </div>
 
-<form id="registerForm" method="POST" enctype="multipart/form-data" onsubmit="return isFormValid()">
+<form id="registerForm" method="POST" enctype="multipart/form-data" onsubmit="console.log(new FormData(this)); return isFormValid();">
   {% csrf_token %}
 
   <div class="row g-3">
@@ -59,7 +82,7 @@
   <div class="row g-3">
     <div class="col-md-6">
       <label for="date_of_birth" class="form-label">Date of Birth*</label>
-      <input type="date" name="date_of_birth" id="date_of_birth" class="form-control" />
+      <input type="date" name="date_of_birth" id="date_of_birth" class="form-control" min="2008-01-01" max="2023-01-01" />
       <small class="error"></small>
     </div>
   </div>
@@ -102,6 +125,16 @@
 </form>
 
 <script>
+
+  function showLoader() {
+    document.getElementById("loader").style.display = "block";
+}
+
+function hideLoader() {
+    document.getElementById("loader").style.display = "none";
+}
+  
+
 function onlyAcceptAlphabets(input) {
   input.value = input.value.replace(/[^a-zA-Z]/g, "");
 }
@@ -160,7 +193,7 @@ document.getElementById("state").addEventListener("change", function () {
     })
     .catch(error => {
       console.error('Error fetching districts:', error);
-      districtDropdown.innerHTML = '<option value="">-- Error Loading --</option>';
+      districtDropdown.innerHTML = '<option value="">-- Select state--</option>';
     });
 });
 
@@ -170,7 +203,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
   const form = this;
 
   if (!isFormValid()) return;
-
+  showLoader()
   const formData = new FormData(form);
   const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
 
@@ -182,6 +215,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     },
     body: formData
   })
+   
   .then(response => response.json())
   .then(data => {
     document.querySelectorAll(".alert").forEach(el => el.remove());
@@ -196,6 +230,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
       form.reset();
       document.getElementById("district").innerHTML = '<option value="">-- Select District --</option>';
     }
+      hideLoader(); 
   })
   .catch(error => {
     console.error("Error submitting form:", error);

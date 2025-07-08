@@ -1,4 +1,5 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render,redirect,get_object_or_404 
+from django.http import HttpResponse
 from .models import user,District,State
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -26,35 +27,38 @@ def register(request):
         district_id = request.POST.get('district', '').strip()
         state_id = request.POST.get('state', '').strip()
         date_of_birth = request.POST.get('date_of_birth','').strip()        
-        if not all([username, password, email, number, firstname, lastname, address, district_id, state_id]):
-            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-                return JsonResponse({'success': False, 'error': 'All fields are required.'})
-            else:
-                return render(request, 'reg_user.html')
+
+        if not all([username, password, email, number, firstname, lastname, address, district_id, state_id, date_of_birth]):
+            return JsonResponse({'success': False, 'error': 'All fields are required.'})
+
         if user.objects.filter(username=username).exists():
-            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-                return JsonResponse({'success': False, 'message': 'Username already taken.'})
-            else:
-                return render(request, 'reg_user.html', {'error': 'Username already taken.'})
+            return JsonResponse({'success': False, 'message': 'Username already taken.'})
+
+        try:
+            district = District.objects.get(pk=district_id)
+            state = State.objects.get(pk=state_id)
+        except (District.DoesNotExist, State.DoesNotExist):
+            return JsonResponse({'success': False, 'error': 'Invalid state or district selected.'})
 
         image = request.FILES.get('image')
         email_verification_token = uuid.uuid4()
 
-        data = user()
-        data.firstName = firstname
-        data.lastName = lastname
-        data.username = username
-        data.password = password
-        data.email = email
-        data.phone_number = number
-        data.image = image
-        data.address = address
-        data.district = District.objects.get(pk=district_id)
-        data.state = State.objects.get(pk=state_id)
-        data.role = 'user'
-        data.date_of_birth = date_of_birth
-        data.email_verification_token = email_verification_token
-        data.is_varified = False
+        data = user(
+            firstName=firstname,
+            lastName=lastname,
+            username=username,
+            password=password,
+            email=email,
+            phone_number=number,
+            image=image,
+            address=address,
+            district=district,
+            state=state,
+            role='user',
+            date_of_birth=date_of_birth,
+            email_verification_token=email_verification_token,
+            is_varified=False
+        )
         data.save() 
 
         verification_link = request.build_absolute_uri(f'/verify/{email_verification_token}/')
@@ -77,13 +81,14 @@ def register(request):
     states = State.objects.all()
     return render(request, 'reg_user.html', {'states': states})
 
-
 # AJAX endpoint to fetch districts
 def get_districts(request):
     state_id = request.GET.get('state_id')
+    if not state_id:
+        return JsonResponse([], safe=False)
+
     districts = District.objects.filter(state_id=state_id).values('id', 'name')
     return JsonResponse(list(districts), safe=False)
-
 
 def admin_dashbord(request):
     userName = request.session.get('username')
@@ -154,31 +159,69 @@ def admin_dashbord(request):
             return JsonResponse({"html": html})
 
         return render(request, 'admin.html', context)
+import random
+from django.http import JsonResponse
+
+# for refresh 
+def refresh_captcha(request):  
+    new_captcha = generate_captcha()
+    request.session['captcha_code'] = new_captcha
+    return JsonResponse({'captcha_code': new_captcha})
+
+# generate captcha
+def generate_captcha():
+    """Generates a random 4-digit captcha"""
+    return str(random.randint(1000, 9999))
+
 def login(request):
     if request.method == 'POST':
         userName = request.POST['name']
         password = request.POST['password']
+        entered_captcha = request.POST.get('captcha')  # input name throw captcha
+
+        # Get captcha from session
+        saved_captcha = request.session.get('captcha_code')  # html right value captcha_code
 
         user_obj = user.objects.filter(username=userName).first()
+
+
+        # Check captcha
+        if entered_captcha != saved_captcha:
+            new_captcha = generate_captcha()
+            request.session['captcha_code'] = new_captcha
+            return render(request, 'login.html', {
+                'error': 'Invalid captcha. Try again.',
+                'captcha_code': new_captcha  # send new captcha here!
+            })
+
 
         if user_obj:
             if password == user_obj.password:
                 if not user_obj.is_varified:
-                    return render(request, 'login.html', {'error3': 'Please verify your email first.'})
-                
-                # ✅ Only set session AFTER verified
+                    return render(request, 'login.html', {
+                        'error3': 'Please verify your email first.',
+                        'captcha_code': saved_captcha   # not refresh captch
+                    })
                 request.session['username'] = user_obj.username
-
                 if user_obj.role == 'admin':
                     return redirect('admin_dashbord')
                 else:
                     return redirect('index')
             else:
-                return render(request, 'login.html', {'error': 'Wrong password'})
+                return render(request, 'login.html', {
+                    'error': 'Wrong password',
+                    'captcha_code': saved_captcha  # not refresh captch
+                })
         else:
-            return render(request, 'login.html', {'error1': 'User name not found'})       
-
-    return render(request, 'login.html')
+            return render(request, 'login.html', {
+                'error1': 'User name not found',
+                'captcha_code': saved_captcha    # not refresh captch
+            })
+    else:
+        # On GET, generate captcha when open
+        captcha_code = generate_captcha()
+        request.session['captcha_code'] = captcha_code # crate session for match
+        return render(request, 'login.html', {'captcha_code': captcha_code})
 
 def update_profile(request):
     userName = request.session.get('username')
@@ -343,3 +386,28 @@ def error(request):
     return render(request, '404.html')
 def contact(request):
     return render(request, 'contact.html')
+
+
+
+
+
+import logging
+
+logger = logging.getLogger('django')
+
+def my_view(request):
+    logger.info('This is a success/info log message')
+    try:
+        # your code here
+        pass
+    except Exception as e:
+        logger.error(f'Error occurred: {e}')
+
+
+import logging
+logger = logging.getLogger('django')
+
+def test_log(request):
+    logger.error("This is a test error log")
+    logger.info("This is a test info log")
+    return HttpResponse("Logs created!")

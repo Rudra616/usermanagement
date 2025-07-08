@@ -3,10 +3,13 @@ from  .views import *
 urlpatterns = [
     path('register/',register, name='register'),
     path('login/',login,name='login'),
+    path('test-logging/', test_log, name='test_log'),
+
     path('update_profile/', update_profile, name='update_profile'),
     path('delete_user/<int:id>/', delete_user, name='delete_user'),  
     path('verify/<uuid:token>/', verify_email, name='verify_email'),
     path('get-districts/', get_districts, name='get_districts'),  # ✅ ADD THIS
+    path('refresh_captcha/', refresh_captcha, name='refresh_captcha'),  # AJAX endpoint
 
     path('logout',logout,name='logout'),
     # path('home',home,name='home'),
