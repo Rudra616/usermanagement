@@ -19,25 +19,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Media files (for uploaded images)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Static files (CSS, JavaScript, Images)
+DEBUG = True
+import os
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = '/static/'
 
-# If you keep static files (CSS, JS, images) inside your app or project, add their paths here:
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    # Add other directories if your static files are somewhere else
+    BASE_DIR / "static",          # your empty project static folder (optional)
+    BASE_DIR / "app" / "static",  # your app's static folder with files
 ]
 
-# For production, STATIC_ROOT is needed, but for development it is optional
-STATIC_ROOT = BASE_DIR / "staticfiles"  # only needed for collectstatic
+STATIC_ROOT = BASE_DIR / "staticfiles"   # for collectstatic
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-unsafe-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost', cast=lambda v: [s.strip() for s in v.split(',')])
 
@@ -58,7 +61,8 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    "django.contrib.messages",
+    "django.contrib.messages",  
+    'livereload',
    
 ]
 

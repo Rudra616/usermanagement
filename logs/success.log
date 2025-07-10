@@ -1,0 +1,986 @@
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/js/main.js
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/lib/animate/animate.min.css
+WARNING "GET /static/lib/animate/animate.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING Not Found: /static/lib/owlcarousel/assets/owl.carousel.min.css
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/style.css
+WARNING "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/css/style.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-3.jpg
+WARNING "GET /static/img/carousel-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/easing/easing.min.js
+WARNING "GET /static/lib/easing/easing.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/waypoints/waypoints.min.js
+WARNING "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/wow/wow.min.js
+WARNING "GET /static/lib/wow/wow.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/owl.carousel.min.js
+WARNING "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/counterup/counterup.min.js
+WARNING "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-2.jpg
+WARNING Not Found: /static/img/service-3.jpg
+WARNING "GET /static/img/service-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/about.jpg
+WARNING "GET /static/img/about.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/js/main.js
+WARNING Not Found: /static/img/service-1.jpg
+WARNING "GET /static/img/service-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-4.jpg
+WARNING "GET /static/img/service-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-5.jpg
+WARNING Not Found: /static/img/service-6.jpg
+WARNING "GET /static/img/service-5.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-8.jpg
+WARNING Not Found: /static/img/team-1.jpg
+WARNING "GET /static/img/service-6.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-8.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/team-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-2.jpg
+WARNING Not Found: /static/img/service-7.jpg
+WARNING "GET /static/img/team-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-7.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-3.jpg
+WARNING "GET /static/img/testimonial-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-3.jpg
+WARNING Not Found: /static/img/team-4.jpg
+WARNING "GET /static/img/team-4.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/team-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-4.jpg
+WARNING "GET /static/img/testimonial-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-1.jpg
+WARNING "GET /static/img/testimonial-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-2.jpg
+WARNING "GET /static/img/testimonial-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/assets/owl.carousel.min.css
+WARNING Not Found: /static/css/style.css
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING Not Found: /static/lib/animate/animate.min.css
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING Not Found: /static/img/carousel-3.jpg
+WARNING Not Found: /static/lib/waypoints/waypoints.min.js
+WARNING Not Found: /static/lib/easing/easing.min.js
+WARNING Not Found: /static/lib/wow/wow.min.js
+WARNING Not Found: /static/lib/counterup/counterup.min.js
+WARNING Not Found: /static/lib/owlcarousel/owl.carousel.min.js
+WARNING Not Found: /static/js/main.js
+WARNING Not Found: /static/img/about.jpg
+WARNING Not Found: /static/img/service-1.jpg
+WARNING Not Found: /static/img/service-2.jpg
+WARNING Not Found: /static/img/service-4.jpg
+WARNING Not Found: /static/img/service-5.jpg
+WARNING Not Found: /static/img/service-3.jpg
+WARNING Not Found: /static/img/service-6.jpg
+WARNING Not Found: /static/img/service-7.jpg
+WARNING Not Found: /static/img/service-8.jpg
+WARNING Not Found: /static/img/team-1.jpg
+WARNING Not Found: /static/img/team-2.jpg
+WARNING Not Found: /static/img/team-3.jpg
+WARNING Not Found: /static/img/testimonial-1.jpg
+WARNING Not Found: /static/img/team-4.jpg
+WARNING Not Found: /static/img/testimonial-3.jpg
+WARNING Not Found: /static/img/testimonial-2.jpg
+WARNING Not Found: /static/img/testimonial-4.jpg
+WARNING Not Found: /static/img/favicon.ico
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/js/main.js
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/css/style.css
+WARNING "GET /static/css/style.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/animate/animate.min.css
+WARNING "GET /static/lib/animate/animate.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/assets/owl.carousel.min.css
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 404 12971
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/wow/wow.min.js
+WARNING "GET /static/lib/wow/wow.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/owl.carousel.min.js
+WARNING "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/counterup/counterup.min.js
+WARNING Not Found: /static/img/carousel-3.jpg
+WARNING "GET /static/img/carousel-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/easing/easing.min.js
+WARNING "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/waypoints/waypoints.min.js
+WARNING "GET /static/lib/easing/easing.min.js HTTP/1.1" 404 12971
+WARNING "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/js/main.js
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-3.jpg
+WARNING "GET /static/img/service-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-1.jpg
+WARNING Not Found: /static/img/service-4.jpg
+WARNING Not Found: /static/img/service-2.jpg
+WARNING "GET /static/img/service-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/about.jpg
+WARNING "GET /static/img/service-4.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/about.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-5.jpg
+WARNING "GET /static/img/service-5.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-2.jpg
+WARNING Not Found: /static/img/service-6.jpg
+WARNING "GET /static/img/team-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-7.jpg
+WARNING Not Found: /static/img/team-1.jpg
+WARNING Not Found: /static/img/service-8.jpg
+WARNING "GET /static/img/service-6.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-8.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-7.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/team-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-3.jpg
+WARNING "GET /static/img/team-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-4.jpg
+WARNING "GET /static/img/team-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-4.jpg
+WARNING "GET /static/img/testimonial-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-1.jpg
+WARNING "GET /static/img/testimonial-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-2.jpg
+WARNING "GET /static/img/testimonial-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-3.jpg
+WARNING "GET /static/img/testimonial-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO /home/tapas/Desktop/r/user__management/project/project/settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/project/settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/project/settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/animate/animate.min.css
+WARNING "GET /static/lib/animate/animate.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/assets/owl.carousel.min.css
+WARNING "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/style.css
+WARNING "GET /static/css/style.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-3.jpg
+WARNING "GET /static/img/carousel-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/wow/wow.min.js
+WARNING "GET /static/lib/wow/wow.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/easing/easing.min.js
+WARNING Not Found: /static/lib/counterup/counterup.min.js
+WARNING "GET /static/lib/easing/easing.min.js HTTP/1.1" 404 12971
+WARNING "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/owl.carousel.min.js
+WARNING Not Found: /static/lib/waypoints/waypoints.min.js
+WARNING "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 404 12971
+WARNING "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/about.jpg
+WARNING "GET /static/img/about.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/js/main.js
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-1.jpg
+WARNING Not Found: /static/img/service-2.jpg
+WARNING "GET /static/img/service-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-4.jpg
+WARNING Not Found: /static/img/service-3.jpg
+WARNING "GET /static/img/service-4.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/service-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-5.jpg
+WARNING "GET /static/img/service-5.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-6.jpg
+WARNING "GET /static/img/service-6.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-7.jpg
+WARNING "GET /static/img/service-7.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-8.jpg
+WARNING "GET /static/img/service-8.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-1.jpg
+WARNING "GET /static/img/team-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-2.jpg
+WARNING "GET /static/img/team-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-3.jpg
+WARNING "GET /static/img/team-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-4.jpg
+WARNING "GET /static/img/team-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-1.jpg
+WARNING "GET /static/img/testimonial-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-2.jpg
+WARNING "GET /static/img/testimonial-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-3.jpg
+WARNING "GET /static/img/testimonial-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-4.jpg
+WARNING "GET /static/img/testimonial-4.jpg HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/js/main.js
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+INFO /home/tapas/Desktop/r/user__management/project/project/settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+INFO "GET / HTTP/1.1" 200 47906
+WARNING Not Found: /static/lib/animate/animate.min.css
+WARNING "GET /static/lib/animate/animate.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/owlcarousel/assets/owl.carousel.min.css
+WARNING "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/css/style.css
+WARNING "GET /static/css/style.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-1.jpg
+WARNING Not Found: /static/css/bootstrap.min.css
+WARNING "GET /static/img/carousel-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/css/bootstrap.min.css HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-2.jpg
+WARNING "GET /static/img/carousel-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/carousel-3.jpg
+WARNING Not Found: /static/lib/wow/wow.min.js
+WARNING "GET /static/img/carousel-3.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/lib/wow/wow.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/easing/easing.min.js
+WARNING "GET /static/lib/easing/easing.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/waypoints/waypoints.min.js
+WARNING "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/lib/counterup/counterup.min.js
+WARNING Not Found: /static/lib/owlcarousel/owl.carousel.min.js
+WARNING "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 404 12971
+WARNING "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-1.jpg
+WARNING "GET /static/img/team-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/about.jpg
+WARNING "GET /static/img/about.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/js/main.js
+WARNING Not Found: /static/img/service-1.jpg
+WARNING "GET /static/img/service-1.jpg HTTP/1.1" 404 12971
+WARNING "GET /static/js/main.js HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-3.jpg
+WARNING "GET /static/img/service-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-2.jpg
+WARNING "GET /static/img/service-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-4.jpg
+WARNING "GET /static/img/service-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-6.jpg
+WARNING "GET /static/img/service-6.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-7.jpg
+WARNING "GET /static/img/service-7.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-5.jpg
+WARNING "GET /static/img/service-5.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-3.jpg
+WARNING "GET /static/img/team-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-2.jpg
+WARNING "GET /static/img/team-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/service-8.jpg
+WARNING "GET /static/img/service-8.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/team-4.jpg
+WARNING "GET /static/img/team-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-1.jpg
+WARNING "GET /static/img/testimonial-1.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-2.jpg
+WARNING "GET /static/img/testimonial-2.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-3.jpg
+WARNING "GET /static/img/testimonial-3.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/testimonial-4.jpg
+WARNING "GET /static/img/testimonial-4.jpg HTTP/1.1" 404 12971
+WARNING Not Found: /static/img/favicon.ico
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 12971
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+INFO "GET /static/css/style.css HTTP/1.1" 200 9969
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 200 166328
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 200 2936
+INFO "GET /static/img/carousel-2.jpg HTTP/1.1" 200 114168
+INFO "GET /static/img/carousel-1.jpg HTTP/1.1" 200 110947
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 200 16953
+INFO "GET /static/img/carousel-3.jpg HTTP/1.1" 200 97890
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 200 8156
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 200 2302
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 200 2406
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 200 42766
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 200 9028
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+INFO "GET /static/img/about.jpg HTTP/1.1" 200 67242
+INFO "GET /static/img/service-1.jpg HTTP/1.1" 200 33040
+INFO "GET /static/img/service-4.jpg HTTP/1.1" 200 22345
+INFO "GET /static/img/service-2.jpg HTTP/1.1" 200 32420
+INFO "GET /static/img/service-3.jpg HTTP/1.1" 200 31750
+INFO "GET /static/img/service-5.jpg HTTP/1.1" 200 37333
+INFO "GET /static/img/team-1.jpg HTTP/1.1" 200 26160
+INFO "GET /static/img/service-7.jpg HTTP/1.1" 200 32947
+INFO "GET /static/img/service-8.jpg HTTP/1.1" 200 38018
+INFO "GET /static/img/team-3.jpg HTTP/1.1" 200 28546
+INFO "GET /static/img/service-6.jpg HTTP/1.1" 200 32286
+INFO "GET /static/img/team-2.jpg HTTP/1.1" 200 29427
+INFO "GET /static/img/testimonial-2.jpg HTTP/1.1" 200 4342
+INFO "GET /static/img/testimonial-3.jpg HTTP/1.1" 200 4524
+INFO "GET /static/img/testimonial-1.jpg HTTP/1.1" 200 5794
+INFO "GET /static/img/team-4.jpg HTTP/1.1" 200 17708
+INFO "GET /static/img/testimonial-4.jpg HTTP/1.1" 200 4821
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47906
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 200 16953
+INFO "GET /static/css/style.css HTTP/1.1" 200 9969
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 200 2936
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 200 166328
+INFO "GET /static/img/carousel-2.jpg HTTP/1.1" 200 114168
+INFO "GET /static/img/carousel-1.jpg HTTP/1.1" 200 110947
+INFO "GET /static/img/carousel-3.jpg HTTP/1.1" 200 97890
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 200 8156
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 200 2302
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 200 9028
+INFO "GET /static/img/service-2.jpg HTTP/1.1" 200 32420
+INFO "GET /static/img/about.jpg HTTP/1.1" 200 67242
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 200 2406
+INFO "GET /static/img/service-1.jpg HTTP/1.1" 200 33040
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+INFO "GET /static/img/service-3.jpg HTTP/1.1" 200 31750
+INFO "GET /static/img/service-4.jpg HTTP/1.1" 200 22345
+INFO "GET /static/img/service-5.jpg HTTP/1.1" 200 37333
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 200 42766
+INFO "GET /static/img/service-8.jpg HTTP/1.1" 200 38018
+INFO "GET /static/img/service-7.jpg HTTP/1.1" 200 32947
+INFO "GET /static/img/team-2.jpg HTTP/1.1" 200 29427
+INFO "GET /static/img/service-6.jpg HTTP/1.1" 200 32286
+INFO "GET /static/img/team-1.jpg HTTP/1.1" 200 26160
+INFO "GET /static/img/team-3.jpg HTTP/1.1" 200 28546
+INFO "GET /static/img/testimonial-2.jpg HTTP/1.1" 200 4342
+INFO "GET /static/img/team-4.jpg HTTP/1.1" 200 17708
+INFO "GET /static/img/testimonial-1.jpg HTTP/1.1" 200 5794
+INFO "GET /static/img/testimonial-3.jpg HTTP/1.1" 200 4524
+INFO "GET /static/img/testimonial-4.jpg HTTP/1.1" 200 4821
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 1905
+INFO "GET / HTTP/1.1" 200 47906
+INFO "GET /static/img/carousel-2.jpg HTTP/1.1" 200 114168
+INFO "GET /static/css/style.css HTTP/1.1" 200 9969
+INFO "GET /static/img/carousel-1.jpg HTTP/1.1" 200 110947
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 200 2936
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 200 166328
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 200 16953
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 200 9028
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 200 8156
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 200 2302
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 200 2406
+INFO "GET /static/img/carousel-3.jpg HTTP/1.1" 200 97890
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 200 42766
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+INFO "GET /static/img/about.jpg HTTP/1.1" 200 67242
+INFO "GET /static/img/service-1.jpg HTTP/1.1" 200 33040
+INFO "GET /static/img/service-2.jpg HTTP/1.1" 200 32420
+INFO "GET /static/img/service-3.jpg HTTP/1.1" 200 31750
+INFO "GET /static/img/service-4.jpg HTTP/1.1" 200 22345
+INFO "GET /static/img/service-7.jpg HTTP/1.1" 200 32947
+INFO "GET /static/img/service-8.jpg HTTP/1.1" 200 38018
+INFO "GET /static/img/service-5.jpg HTTP/1.1" 200 37333
+INFO "GET /static/img/service-6.jpg HTTP/1.1" 200 32286
+INFO "GET /static/img/team-2.jpg HTTP/1.1" 200 29427
+INFO "GET /static/img/team-1.jpg HTTP/1.1" 200 26160
+INFO "GET /static/img/team-3.jpg HTTP/1.1" 200 28546
+INFO "GET /static/img/team-4.jpg HTTP/1.1" 200 17708
+INFO "GET /static/img/testimonial-1.jpg HTTP/1.1" 200 5794
+INFO "GET /static/img/testimonial-2.jpg HTTP/1.1" 200 4342
+INFO "GET /static/img/testimonial-4.jpg HTTP/1.1" 200 4821
+INFO "GET /static/img/testimonial-3.jpg HTTP/1.1" 200 4524
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 1905
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+ERROR Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/tapas/Desktop/r/user__management/venv/lib/python3.12/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'portfolio.local'. You may need to add 'portfolio.local' to ALLOWED_HOSTS.
+INFO Watching for file changes with StatReloader
+INFO "GET / HTTP/1.1" 200 47894
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 1905
+INFO "GET /register/ HTTP/1.1" 200 9655
+INFO "GET /static/js/reg.js HTTP/1.1" 200 3301
+INFO "GET /static/css/reg_user.css HTTP/1.1" 200 3107
+INFO "GET /register/ HTTP/1.1" 200 9655
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /register/ HTTP/1.1" 200 9655
+INFO "GET /register/ HTTP/1.1" 200 9612
+INFO "POST /register/ HTTP/1.1" 200 55
+WARNING Not Found: /favicon.ico
+WARNING "GET /favicon.ico HTTP/1.1" 404 6213
+INFO "GET /register/ HTTP/1.1" 200 9612
+INFO "GET /register/ HTTP/1.1" 200 9612
+INFO "POST /register/ HTTP/1.1" 200 55
+INFO "GET /register/ HTTP/1.1" 200 9655
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /register/ HTTP/1.1" 200 9098
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /login/ HTTP/1.1" 200 7786
+INFO "GET /static/css/login.css HTTP/1.1" 200 294
+INFO "GET /static/js/login.js HTTP/1.1" 200 766
+INFO "GET /register/ HTTP/1.1" 200 9098
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /register/ HTTP/1.1" 200 9098
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /login/ HTTP/1.1" 200 7802
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+INFO "GET /register/ HTTP/1.1" 200 9098
+INFO "GET /login/ HTTP/1.1" 200 7802
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+INFO "GET /login/ HTTP/1.1" 200 7802
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+INFO "GET /login/ HTTP/1.1" 200 7802
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+WARNING Not Found: /login/{% url 'refresh_captcha' %}
+WARNING "GET /login/%7B%%20url%20'refresh_captcha'%20%%7D HTTP/1.1" 404 6323
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 200 915
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 200 883
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 200 2302
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 200 2936
+INFO "GET /static/js/login.js HTTP/1.1" 200 883
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 200 8156
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 200 16953
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 200 166328
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+INFO "GET /static/css/style.css HTTP/1.1" 200 9969
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 200 9028
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 200 42766
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 200 2406
+WARNING "GET /static/css/login.css HTTP/1.1" 404 1899
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 1905
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING "GET /static/css/login.css HTTP/1.1" 404 1899
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+INFO "GET /login/ HTTP/1.1" 200 7718
+WARNING "GET /static/css/login.css HTTP/1.1" 404 1899
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING Not Found: /refresh-captcha/
+WARNING "GET /refresh-captcha/ HTTP/1.1" 404 6228
+INFO /home/tapas/Desktop/r/user__management/project/app/urls.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+WARNING Not Found: /favicon.ico
+WARNING "GET /favicon.ico HTTP/1.1" 404 6213
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING "GET /static/css/login.css HTTP/1.1" 404 1899
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+INFO "POST /login/ HTTP/1.1" 302 0
+INFO "GET / HTTP/1.1" 200 47906
+INFO "GET /update_profile/ HTTP/1.1" 200 9601
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /media/user_images/welding-website-template_807XAYe.jpg HTTP/1.1" 200 99485
+INFO "POST /update_profile/ HTTP/1.1" 302 0
+INFO "GET /update_profile/ HTTP/1.1" 200 9774
+INFO "POST /update_profile/ HTTP/1.1" 302 0
+INFO "GET /update_profile/ HTTP/1.1" 200 9774
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /update_profile/ HTTP/1.1" 200 9611
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+INFO "GET /refresh-captcha/ HTTP/1.1" 200 24
+INFO "GET /update_profile/ HTTP/1.1" 200 9611
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 304 0
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO "GET /static/css/style.css HTTP/1.1" 304 0
+INFO "GET /static/css/reg_user.css HTTP/1.1" 200 3644
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 304 0
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 304 0
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 304 0
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 304 0
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 304 0
+INFO "GET /static/js/main.js HTTP/1.1" 304 0
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 304 0
+INFO "GET /logout HTTP/1.1" 302 0
+INFO "GET / HTTP/1.1" 200 47894
+INFO "GET /login/ HTTP/1.1" 200 7718
+INFO "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING "GET /static/css/login.css HTTP/1.1" 404 1899
+INFO "POST /login/ HTTP/1.1" 302 0
+INFO "GET /user_listing HTTP/1.1" 200 14464
+INFO "GET /user_listing HTTP/1.1" 200 14464
+INFO "GET /user_listing?search=&per_page=35 HTTP/1.1" 200 26992
+INFO "GET /user_listing?search=&per_page=50 HTTP/1.1" 200 34462
+INFO "GET /user_listing?search=a&per_page=50 HTTP/1.1" 200 2913
+INFO "GET /user_listing?search=&per_page=10 HTTP/1.1" 200 14464
+INFO "GET /user_listing?search=&per_page=35 HTTP/1.1" 200 26992
+INFO "GET /user_listing?search=&per_page=35 HTTP/1.1" 200 26993
+INFO "GET /user_listing?search=&per_page=10 HTTP/1.1" 200 14465
+INFO "GET /user_listing?search=&per_page=10 HTTP/1.1" 200 14494
+INFO "GET /user_listing?search=&per_page=35 HTTP/1.1" 200 27022
+INFO "GET /user_listing?search=&per_page=10 HTTP/1.1" 200 14494
+INFO "GET /user_listing?search=&per_page=35 HTTP/1.1" 200 27022
+INFO "GET /user_listing?search=&per_page=all HTTP/1.1" 200 57679
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO Watching for file changes with StatReloader
+INFO "GET /user_listing?search=&per_page=all HTTP/1.1" 200 57649
+INFO "GET /update_profile/ HTTP/1.1" 200 9498
+INFO "GET /static/css/reg_user.css HTTP/1.1" 304 0
+INFO "GET /static/js/reg.js HTTP/1.1" 304 0
+INFO "GET /user_listing?search=&per_page=all HTTP/1.1" 200 57649
+INFO "GET /user_listing?search=&per_page=all HTTP/1.1" 200 32691
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /user_listing?search=&per_page=all HTTP/1.1" 200 57649
+INFO "GET /user_listing?search=rudra&per_page=all HTTP/1.1" 200 1831
+INFO "GET /user_listing?search=rudra&per_page=35 HTTP/1.1" 200 10522
+INFO "GET /user_listing?search=rudra&per_page=10 HTTP/1.1" 200 10522
+INFO "GET /user_listing?search=rudra&per_page=10 HTTP/1.1" 200 10547
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=rudra&per_page=50&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 10547
+INFO "GET /user_listing?search=rudra&per_page=10&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 1830
+INFO "GET /user_listing?search=u1&per_page=35&page=1 HTTP/1.1" 200 12342
+INFO "GET /user_listing?search=u1&per_page=10&page=1 HTTP/1.1" 200 6104
+INFO "GET /user_listing?search=u1&per_page=10&page=1 HTTP/1.1" 200 14633
+INFO "GET /user_listing?search=u1&per_page=10&page=1 HTTP/1.1" 200 6104
+INFO "GET /user_listing?search=u1&per_page=35&page=1 HTTP/1.1" 200 12342
+INFO "GET /user_listing?search=u1&per_page=50&page=1 HTTP/1.1" 200 12342
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 26830
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 34487
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 5952
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14580
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 19030
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 27108
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 27108
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 27108
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 5952
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14580
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 34578
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 34579
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14581
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14576
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 34574
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 34574
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 27104
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 27104
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14576
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 14576
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 18197
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO /home/tapas/Desktop/r/user__management/project/app/views.py changed, reloading.
+INFO Watching for file changes with StatReloader
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 7185
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 7185
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=10&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=all&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=10&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=10&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=35&page=1 HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 7185
+INFO "GET /user_listing?search=&per_page=10&page=1 HTTP/1.1" 200 2203
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 10125
+INFO "GET /user_listing?search=rudra&per_page=50&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=50&page=1 HTTP/1.1" 200 9841
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 304 0
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 304 0
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 304 0
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 304 0
+INFO "GET /static/css/style.css HTTP/1.1" 304 0
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 304 0
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 304 0
+INFO "GET /static/js/main.js HTTP/1.1" 304 0
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 304 0
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing?search=&per_page=35&page=1 HTTP/1.1" 200 7185
+INFO "GET /user_listing?search=&per_page=50&page=1 HTTP/1.1" 200 10125
+INFO "GET /user_listing?search=rudra&per_page=50&page=1 HTTP/1.1" 200 589
+INFO "GET /user_listing?search=rudra&per_page=50&page=1 HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing? HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing? HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+INFO "GET /user_listing? HTTP/1.1" 200 9841
+INFO "GET /static/lib/animate/animate.min.css HTTP/1.1" 200 16953
+INFO "GET /static/lib/easing/easing.min.js HTTP/1.1" 200 2302
+INFO "GET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1" 200 2936
+INFO "GET /static/css/style.css HTTP/1.1" 200 9969
+INFO "GET /static/css/bootstrap.min.css HTTP/1.1" 200 166328
+INFO "GET /static/lib/wow/wow.min.js HTTP/1.1" 200 8156
+INFO "GET /static/lib/waypoints/waypoints.min.js HTTP/1.1" 200 9028
+INFO "GET /static/lib/counterup/counterup.min.js HTTP/1.1" 200 2406
+INFO "GET /static/js/main.js HTTP/1.1" 200 2106
+INFO "GET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1" 200 42766
+INFO "GET /user_listing? HTTP/1.1" 200 9841
+INFO "GET /user_listing HTTP/1.1" 200 2203
+WARNING "GET /static/img/favicon.ico HTTP/1.1" 404 1905

@@ -1,19 +1,19 @@
 {% extends "nav.html" %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}" />
 <style>
-  .error{
-    background-color: brown;
+  .error {
+    background-color: red;
+    color: white;
   }
   #forget {
     color: red;
   }
-  .cpatchur {
-    height: 10%;
-    width: 10%;
-    background-color: aquamarine;
-  }
+
 </style>
-{% endblock %} {% block body %} {% if messages %} {% for message in messages %}
+{% endblock %} 
+{% block body %} 
+{% if messages %} 
+{% for message in messages %}
 <div
   class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %} alert-dismissible fade show"
   role="alert"
@@ -74,7 +74,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="captcha" class="form-label">Enter Captcha</label>
+          <label for="captcha" class="form-label">Enter captcha</label>
           <div class="d-flex align-items-center">
             <div class="cpatchur text-center me-2 p-2">{{ captcha_code }}</div>
             <button
@@ -92,7 +92,7 @@
             placeholder="Enter captcha here"
             id="captcha"
           />
-           <small class="error"></small> 
+          <small class="error"></small>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Submit</button>
@@ -110,32 +110,5 @@
 <script src="{% static 'js/login.js' %}"></script>
 
 <!-- Inline Validation JS -->
-<script>
-  function refreshCaptcha() {
-    fetch("{% url 'refresh_captcha' %}")
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector('.cpatchur').innerText = data.captcha_code;
-    });
-}
-
-  function required() {
-    var isValid = true;
-
-    var errors = document.querySelectorAll("[class='error']");
-    var name = document.getElementById("name").value.trim();
-    var password = document.getElementById("password").value.trim();
-    var captcha = document.getElementById("captcha").value.trim();;
-    var all = [name, password,captcha];
-    all.forEach((element, key) => {
-      if (element === "") {
-        errors[key].innerText = "This field is required";
-        isValid = false;
-      }
-    });
-
-    return isValid;
-  }
-</script>
 
 {% endblock %}

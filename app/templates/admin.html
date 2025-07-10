@@ -1,102 +1,131 @@
 {% extends "nav.html" %}
 {% block css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        
-    </style>
-    {% endblock %}
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .pagination a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: #007bff;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
 
 {% block body %}
+<h2 class="p">Welcome Admin: {{ userdetails.username }}</h2>
+<h3>All Users</h3>
 
-        <h2 class="p">Welcome Admin: {{ userdetails.username }}</h2>
-        <h3>All Users</h3>
-    <div class="main">
-        <form id="filterForm" method="get">
-     
-        <input type="text" name="search" id="searchInput"  placeholder="Search username" value="{{ search_query }}">
+<div class="main">
+    <form id="filterForm" method="get">
+        <input type="text" name="search" id="searchInput" placeholder="Search username">
         <button type="submit">Search</button>
+        <select name="per_page" id="perPageSelect">
+            <option value="10">10</option>
+            <option value="35">35</option>
+            <option value="50">50</option>
+            <option value="all">All</option>
+        </select>
+    </form>
 
-  {% comment %} <select name="per_page"  onchange="this.form.submit()"> {% endcomment %}
-    <select name="per_page" id="perPageSelect">
+    <div id="userTableSection"></div>
+</div>
 
-    <!--when user select then autometicaly submit the form-->
-    <option value="10" {% if per_page == "10" %}selected{% endif %}>10</option>
-    <option value="35" {% if per_page == "35" %}selected{% endif %}>35</option>
-    <option value="50" {% if per_page == "50" %}selected{% endif %}>50</option>
-    <option value="all" {% if per_page == "all" %}selected{% endif %}>All</option>
-  </select>    
-</form>
-
-    <div id="userTableSection">
-
-        {% include "user_table.html" %}
-  </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    function fetchUsers(params={}){
+function fetchUsers(params = {}) {
+    const queryString = new URLSearchParams(params).toString();
+    const newUrl = window.location.pathname + '?' + queryString;
+    window.history.pushState({}, '', newUrl);
 
-        //It takes one argument: params (default is empty object {})
-
-        const queryString = new URLSearchParams(params).toString();//.toString() → Makes it a plain query string.
-        const newUrl = window.location.pathname + '?' + queryString;//pathname = admin_dashbord and ? quarystring
-        
-        // Update browser URL
-        window.history.pushState({}, '', newUrl);//js api without reloading page
-        // {} Save which page or search user was on.,''page title
-
-        //jQuery’s AJAX
-        $.ajax({
-            url: "{% url 'admin_dashbord' %}",
-            data: params,             // These are the parameters (search, per_page, page,sort)
-            type :'GET',  // read only 
-            success:function(data){    //status 200
-                $('#userTableSection').html(data.html); //Replaces its contents with the new table HTML sent by Django.
+    $.ajax({
+        url: "{% url 'admin_dashbord' %}",
+        data: params,
+        type: 'GET',
+        headers: { "X-Requested-With": "XMLHttpRequest" },
+        success: function(data) {
+            renderTable(data.users);
+            renderPagination(data.pagination);
+            if (data.search_count !== null) {
+                $('#userTableSection').prepend(
+                    `<p><b>${data.search_count}</b> users found for "<b>${$('#searchInput').val()}</b>"</p>`
+                );
             }
+            if (data.matched_page) {
+                $('#userTableSection').prepend(
+                    `<div class="alert alert-info mt-2">
+                        User found on page <strong>${data.matched_page}</strong>.
+                    </div>`
+                );
+            }
+        }
+    });
+}
+
+function renderTable(users) {
+    let html = '<table class="table table-dark table-striped"><tr>';
+    html += '<th>ID</th><th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th><th>Address</th><th>District</th><th>State</th><th>Date of Birth</th><th>Actions</th></tr>';
+
+    if (users.length === 0) {
+        html += '<tr><td colspan="10">No users found.</td></tr>';
+    } else {
+        users.forEach(user => {
+            html += `<tr>
+                <td>${user.id}</td>
+                <td>${user.first_name}</td>
+                <td>${user.last_name}</td>
+                <td>${user.username}</td>
+                <td>${user.email}</td>
+                <td>${user.address}</td>
+                <td>${user.district}</td>
+                <td>${user.state}</td>
+                <td>${user.date_of_birth}</td>
+                <td>
+                    <a href="/delete_user/${user.id}/" onclick="return confirm('Are you sure you want to delete ${user.username}?');">Delete</a>
+                </td>
+            </tr>`;
         });
     }
 
-     // Step 2: When the search form is submitted
-    $("#filterForm").on('submit',function(e){  //e = event object for form submit.
-        e.preventDefault(); // not load page 
+    html += '</table>';
+    $('#userTableSection').html(html);
+}
 
-        const search = $("#searchInput").val()// 
-        const per_page =$("#perPageSelect").val()//
+function renderPagination(pagination) {
+    let html = '<div class="pagination">';
+    if (pagination.has_previous) {
+        html += `<a href="#" class="pagelink" data-page="${pagination.current_page - 1}">Previous</a>`;
+    }
+    html += `<span>Page ${pagination.current_page} of ${pagination.total_pages}</span>`;
+    if (pagination.has_next) {
+        html += `<a href="#" class="pagelink" data-page="${pagination.current_page + 1}">Next</a>`;
+    }
+    html += '</div>';
+    $('#userTableSection').append(html);
+}
 
-        fetchUsers({search :search,per_page:per_page});
-        // fetch value of search , per_page
-    })
-
-    // select page
-    $('#perPageSelect').on('change', function () {
-        $('#filterForm').submit(); 
-    });
-
-    //pagination click next previous
-    $(document).on('click','.pagelink',function(e){
-        e.preventDefault()    // no page reload
-        const page = $(this).data('page'); //$(this) means "the element you clicked on", .data which page
-        const search = $('#searchInput').val(); //value of search
-        const per_page = $('#perPageSelect').val();  // value of perPageSelect
-        fetchUsers({ page: page, search: search, per_page: per_page }); // Load new page via AJAX
-    })
-
-    $(document).on('click', '.ajax-sort', function(e){    //for sorting
-        e.preventDefault();   // not load
-
-        // Get current search and per_page values
-        const search = $('#searchInput').val();
-        const per_page = $('#perPageSelect').val();
-        const sort = $(this).data('sort');  // e.g., 'username'
-
-        // Call your fetchUsers function with sort param added
-        fetchUsers({search: search, per_page: per_page, sort: sort});
+$("#filterForm").on('submit', function(e) {
+    e.preventDefault();
+    const search = $("#searchInput").val();
+    const per_page = $("#perPageSelect").val();
+    fetchUsers({ search: search, per_page: per_page, page: 1 });
 });
 
+$('#perPageSelect').on('change', function () {
+    const search = $('#searchInput').val();
+    const per_page = $('#perPageSelect').val();
+    fetchUsers({ search: search, per_page: per_page, page: 1 });
+});
 
+$(document).on('click', '.pagelink', function(e) {
+    e.preventDefault();
+    const page = $(this).data('page');
+    const search = $('#searchInput').val();
+    const per_page = $('#perPageSelect').val();
+    fetchUsers({ page: page, search: search, per_page: per_page });
+});
+
+$(document).ready(function() {
+    fetchUsers(); // Load data initially
+});
 </script>
-
-{%endblock%}
-
+{% endblock %}

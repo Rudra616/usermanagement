@@ -9,7 +9,7 @@ urlpatterns = [
     path('delete_user/<int:id>/', delete_user, name='delete_user'),  
     path('verify/<uuid:token>/', verify_email, name='verify_email'),
     path('get-districts/', get_districts, name='get_districts'),  # ✅ ADD THIS
-    path('refresh_captcha/', refresh_captcha, name='refresh_captcha'),  # AJAX endpoint
+    path('refresh-captcha/', refresh_captcha, name='refresh_captcha'),
 
     path('logout',logout,name='logout'),
     # path('home',home,name='home'),

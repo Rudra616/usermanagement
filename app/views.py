@@ -89,76 +89,71 @@ def get_districts(request):
 
     districts = District.objects.filter(state_id=state_id).values('id', 'name')
     return JsonResponse(list(districts), safe=False)
-
 def admin_dashbord(request):
     userName = request.session.get('username')
     user_obj = user.objects.filter(username=userName).first()
+
     if user_obj and user_obj.role == 'admin':
         all_users = user.objects.filter(role='user')
 
         search_query = request.GET.get('search', '')
-
         if search_query:
-            all_users = all_users.filter(
-            username__icontains=search_query 
-        )
-        search_count = all_users.count()
+            all_users = all_users.filter(username__icontains=search_query)
 
-        sort = request.GET.get('sort','')
+        sort = request.GET.get('sort', '')
         if sort == 'username':
             all_users = all_users.order_by('username')
-        
 
-        per_page = request.GET.get("per_page","10")
+        per_page = request.GET.get("per_page", "10")
         if per_page == 'all':
             per_page_count = all_users.count()
         else:
             per_page_count = int(per_page)
+
         page_number = request.GET.get("page")
-        #  get the page number next click then page 2 show o
-        #  Give me the users for this page number.
-        paginator = Paginator(all_users,per_page_count)
-        #  paginator was devide the page large to small picess
-        #  show all user perpage count how many user you want to show this see 
+        paginator = Paginator(all_users, per_page_count)
         page_obj = paginator.get_page(page_number)
-        matched_page= None
-        #  no matched page
-        if search_query:
-            #  serch any username 
-            full_users = user.objects.filter(role='user').order_by('id')
-            #  This gets all users with role = 'user', sorted by their ID (not username).
-            match =full_users.filter(username__icontains=search_query).first()
-            #  This finds the first user whose username contains the search word.
-            if match:
-                postion = list(full_users).index(match)
-                #  Converts the full queryset (full_users) into a list.
-                #  if find the user
-                matched_page = postion // per_page_count + 1 if per_page != 'all' else 1
-                #  It calculates on which page the matched user appears.
-                #  suppose postion was 20 
-                #  page par count you select = 10 
-                #  matched_page = 22 // 10 + 1
-                #   = 2 + 1
-                #   = 3
-                #   in if condition go not all then claculation 
-                #   if all then return 1                    
+
+        search_count = all_users.count() if search_query else None
+
+        # Prepare data for JSON response
+        user_data = []
+        for u in page_obj:
+            user_data.append({
+                "id": u.id,
+                "first_name": u.firstName,
+                "last_name": u.lastName,
+                "username": u.username,
+                "email": u.email,
+                "address": u.address,
+                "district": u.district,
+                "state": u.state,
+                "date_of_birth": u.date_of_birth.strftime("%b. %d, %Y") if u.date_of_birth else None
+            })
+
+        pagination = {
+            "current_page": page_obj.number,
+            "total_pages": paginator.num_pages,
+            "has_next": page_obj.has_next(),
+            "has_previous": page_obj.has_previous()
+        }
+
+        # If AJAX, return JSON
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({
+                "users": user_data,
+                "pagination": pagination,
+                "search_count": search_count,
+                "matched_page": page_obj.number if search_query else None
+            })
+
+        # For normal page load
         context = {
             'userdetails': user_obj,
             'is_admin': True,
-            'users': page_obj,
-            "search_query": search_query,
-            'per_page': per_page,
-            'matched_page': matched_page,
-            'search_count': search_count if search_query else None
-
         }
-
-        # If it's AJAX request, return only HTML table part
-        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-            html = render_to_string("user_table.html", context)
-            return JsonResponse({"html": html})
-
         return render(request, 'admin.html', context)
+
 import random
 from django.http import JsonResponse
 
